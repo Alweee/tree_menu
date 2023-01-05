@@ -1,0 +1,58 @@
+{% for product in products %}
+  <ul class="tree">
+    <li>
+      <details open>
+        <summary>{{product.name}}</summary>
+        <ul>
+          <li>
+            <details>
+              <summary>Цена</summary>
+              <ul>
+                <li><a href="{% url 'main_menu' %}">{{product.price}}</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Категория</summary>
+              <ul>
+                <li><a href="{% url 'main_menu' %}">{{product.category}}</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Описание</summary>
+              <ul>
+                <li>{{product.description}}</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Дата создания</summary>
+              <ul>
+                <li>{{product.date_created}}</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Другое</summary>
+              <ul>
+                <li>
+                  <details>
+                    <summary>tags</summary>
+                    <ul>
+                      <li><a href="{% url 'main_menu' %}">{{product.tags}}</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+{% endfor %}
