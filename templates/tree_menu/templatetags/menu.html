@@ -24,7 +24,7 @@
             <details>
               <summary>Описание</summary>
               <ul>
-                <li>{{product.description}}</li>
+                <li><a href="{% url 'main_menu' %}">{{product.description}}</a></li>
               </ul>
             </details>
           </li>
@@ -32,7 +32,7 @@
             <details>
               <summary>Дата создания</summary>
               <ul>
-                <li>{{product.date_created}}</li>
+                <li><a href="{% url 'main_menu' %}">{{product.date_created}}</a></li>
               </ul>
             </details>
           </li>
